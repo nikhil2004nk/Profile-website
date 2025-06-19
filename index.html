@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Nik Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <body>
+      <header class="header">
+        <a href="#" class="logo"> Nik. </a>
+
+        <nav class="navbar">
+          <a href="#" class="active">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="https://nikhil2004nk.github.io/personal-website/"
+            >Portfolio</a
+          >
+          <a href="https://wa.me/919324302421">Contact</a>
+        </nav>
+        <div id="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+      </header>
+
+      <section class="home">
+        <div class="home-content">
+          <h1>Hi, I am Nikhil Kushwaha</h1>
+          <h3>Frontend Developer</h3>
+          <p>
+            A final-year Electronics & Telecommunication Engineering student
+            from Thakur College of Engineering and Technology passed with a CGPI
+            of 9.01. I have hands-on experience in web development, AI-based
+            gesture recognition projects, and front-end technologies. Through
+            internships and leadership roles, I’ve strengthened my skills in
+            full-stack development, teamwork, and technical event coordination.
+            I am passionate about building inclusive digital solutions and
+            continuously learning in the tech space.
+          </p>
+          <div class="btn-box">
+            <a href="#">Hire Me</a>
+            <a href="#">Let's Talk</a>
+          </div>
+        </div>
+
+        <div class="home-sci">
+          <a href="Nikdocuments12@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://github.com/nikhil2004nk">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/nikhil-kushwaha12/">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <span class="home-imgHover"></span>
+      </section>
+
+      <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.querySelector(".navbar");
+
+        menuIcon.addEventListener("click", () => {
+          navbar.classList.toggle("active");
+          menuIcon.classList.toggle("fa-xmark");
+          menuIcon.classList.toggle("fa-bars");
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll(".navbar a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!navbar.contains(e.target) && !menuIcon.contains(e.target)) {
+            navbar.classList.remove("active");
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+          }
+        });
+      </script>
+    </body>
+  </head>
+</html>
