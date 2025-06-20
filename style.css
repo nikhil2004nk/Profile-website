@@ -172,6 +172,7 @@ body {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+    text-align: center;
 }
 
 .btn-box a:hover {
